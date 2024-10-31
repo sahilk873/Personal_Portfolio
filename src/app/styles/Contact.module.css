@@ -1,0 +1,101 @@
+/* Contact.module.css */
+
+/* Main Container with Gradient Background */
+.container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack form and social icons vertically */
+  padding: 40px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f06, #4a90e2);
+  opacity: 0; /* Initially hidden to enable fade-in */
+  transform: translateY(20px); /* Initially shifted down for fade-in */
+  animation: fadeInEffect 1.5s ease-in-out forwards;
+}
+
+/* Fade-In Animation */
+@keyframes fadeInEffect {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form Styling */
+.form {
+  width: 100%;
+  max-width: 600px; /* Increase the form's max width */
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px; /* Add space below form to separate from social media icons */
+}
+
+.heading {
+  font-size: 28px; /* Increase the heading size */
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Social Media Section Styling */
+.socialMedia {
+  display: flex;
+  justify-content: center; /* Center social icons horizontally */
+  gap: 40px; /* Space between social buttons */
+}
+
+/* Social Button Styling */
+.socialButton {
+  display: inline-block;
+  width: 70px; /* Increase width of social icons */
+  height: 70px; /* Increase height of social icons */
+  cursor: pointer;
+}
+
+.socialIcon {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.socialButton:hover .socialIcon {
+  transform: scale(1.2); /* Enlarge icon on hover */
+}

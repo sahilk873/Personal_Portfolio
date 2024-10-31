@@ -1,0 +1,41 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f06, #4a90e2);
+  color: white;
+  text-align: center;
+}
+
+.heroContent {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.fadeIn {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.slideIn {
+  animation: slideIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

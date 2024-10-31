@@ -1,0 +1,62 @@
+/* Projects.module.css */
+
+/* Main Section with Gradient Background and Padding */
+.projects {
+  padding: 2rem;
+  min-height: 100vh;
+  text-align: center;
+  background: linear-gradient(135deg, #f06, #4a90e2);
+  opacity: 0; /* Initially hidden to enable fade-in */
+  transform: translateY(20px); /* Initially shifted down for fade-in effect */
+  animation: fadeInEffect 1.5s ease-in-out forwards;
+}
+
+/* Grid Layout for Projects */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Individual Project Card Styling */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Enlarge slightly on hover */
+}
+
+/* Project Image Styling */
+.image {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Project Link Styling */
+.link {
+  color: #00ffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #0056b3;
+}
+
+/* Fade-In Animation */
+@keyframes fadeInEffect {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

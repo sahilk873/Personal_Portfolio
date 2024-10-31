@@ -1,0 +1,55 @@
+/* About.module.css */
+
+/* Background with Gradient Matching Your Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f06, #4a90e2);
+  color: white;
+  text-align: center;
+}
+
+/* About Section Styling */
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  opacity: 0; /* Initially hidden to enable fade-in */
+  transform: translateY(20px); /* Initially shifted down for the fade-in effect */
+  animation: fadeInEffect 1.5s ease-in-out forwards;
+  background: rgba(255, 255, 255, 0.8); /* Background with slight transparency for contrast */
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+/* Resume Link Styling */
+.resumeLink {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #021212;
+  text-decoration: none;
+  border: 1px solid #00ffff;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.resumeLink:hover {
+  background: #00ffff;
+  color: #0e0e0e;
+}
+
+/* Fade-In Animation */
+@keyframes fadeInEffect {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
